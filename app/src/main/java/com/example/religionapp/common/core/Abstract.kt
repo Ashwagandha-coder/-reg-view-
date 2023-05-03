@@ -1,7 +1,9 @@
 package com.example.religionapp.common.core
 
 /**
- * Любой обьект
+ * Abstract is Base class for abstraction = package
+ * Object is base class for any object which need map operation
+ * Mapper is interface for mapping object in Abstract
  */
 
 
@@ -17,7 +19,7 @@ abstract class Abstract {
 
     interface Mapper {
 
-        class Empty(): Mapper
+        class Empty() : Mapper
 
     }
 
