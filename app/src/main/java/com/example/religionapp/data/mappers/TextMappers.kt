@@ -1,4 +1,4 @@
-package com.example.religionapp.mappers
+package com.example.religionapp.data.mappers
 
 
 interface Mapper<S,R> {

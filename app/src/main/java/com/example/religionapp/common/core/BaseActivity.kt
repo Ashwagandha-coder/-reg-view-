@@ -1,4 +1,4 @@
-package com.example.religionapp.common.base
+package com.example.religionapp.common.core
 
 import android.os.Bundle
 import android.os.PersistableBundle
