@@ -7,4 +7,8 @@ sealed class BookUi(): Abstract.Object<Unit,Abstract.Mapper.Empty>() {
     // todo: interface Communication for data for UI
 
 
+
+    fun doSome() {
+
+    }
 }
