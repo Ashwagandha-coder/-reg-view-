@@ -1,4 +1,9 @@
 package com.example.religionapp.ui
 
-class BookUi {
+import com.example.religionapp.common.core.Abstract
+
+sealed class BookUi(): Abstract.Object<Unit,Abstract.Mapper.Empty>() {
+
+
+
 }
