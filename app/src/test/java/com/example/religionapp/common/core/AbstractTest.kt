@@ -6,7 +6,7 @@ import org.junit.Test
 internal class AbstractTest {
 
     @Test
-    fun test_sucsess() {
+    fun test_succsess() {
 
 
 
@@ -15,12 +15,20 @@ internal class AbstractTest {
 
 
 
-    private class TestObject: Abstract.Object<TestDomainObjetct,TestUIObject>() {
+    private class TestDataObject: Abstract.Object<TestDomainObject,TestDomainToDataMapper>() {
+
+       abstract override fun map(mapper: TestDomainToDataMapper): TestDomainObject
 
 
 
 
     }
+
+    private interface TestDomainToDataMapper: Abstract.Mapper
+
+    private sealed class TestDomainObject
+
+
 
 
 
