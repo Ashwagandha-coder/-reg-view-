@@ -1,5 +1,6 @@
 package com.example.religionapp.common.core
 
+import junit.framework.TestCase.assertEquals
 import org.junit.Test
 
 
@@ -8,27 +9,32 @@ internal class AbstractTest {
     @Test
     fun test_success() {
         val dataObject = TestDataObject.Success("one_text", "two_text")
-        val exception = Exception("TestDataObject exception")
-        val dataObject_2 = TestDataObject.Failure(exception)
+        val mapper = TestDataToDomainMapper.Base()
+        val domainObject = dataObject.map(mapper)
+
+        val expected = 0
+        val actual = 0
+
+        assertEquals(expected, actual)
 
 
     }
 
 
     private sealed class TestDataObject :
-        Abstract.Object<TestDomainObject, TestDomainToDataMapper>() {
+        Abstract.Object<TestDomainObject, TestDataToDomainMapper>() {
 
-        abstract override fun map(mapper: TestDomainToDataMapper): TestDomainObject
+        abstract override fun map(mapper: TestDataToDomainMapper): TestDomainObject
 
 
         class Success(private val textOne: String, private val textTwo: String) : TestDataObject() {
-            override fun map(mapper: TestDomainToDataMapper): TestDomainObject =
+            override fun map(mapper: TestDataToDomainMapper): TestDomainObject =
                 mapper.map(textOne, textTwo)
 
         }
 
         class Failure(private val exception: Exception) : TestDataObject() {
-            override fun map(mapper: TestDomainToDataMapper): TestDomainObject =
+            override fun map(mapper: TestDataToDomainMapper): TestDomainObject =
                 mapper.map(exception)
         }
 
@@ -39,26 +45,37 @@ internal class AbstractTest {
 
         abstract override fun map(mapper: TestDomainToUiMapper): TestUiObject
 
-        class Success(): TestDomainObject() {
+        class Success(private val textOne: String, textTwo: String) : TestDomainObject() {
 
             override fun map(mapper: TestDomainToUiMapper): TestUiObject = mapper.map()
         }
 
-        class Failure(): TestDomainObject() {
+        class Failure(private val exception: Exception) : TestDomainObject() {
 
-            override fun map(mapper: TestDomainToUiMapper): TestUiObject = mapper.map()
+            override fun map(mapper: TestDomainToUiMapper) = mapper.map()
         }
 
 
     }
 
-    private sealed class TestUiObject
+    private class TestUiObject()
 
-    private interface TestDomainToDataMapper : Abstract.Mapper {
+    private interface TestDataToDomainMapper : Abstract.Mapper {
 
         fun map(textOne: String, textTwo: String): TestDomainObject
 
         fun map(e: Exception): TestDomainObject
+
+
+        class Base() : TestDataToDomainMapper {
+            override fun map(textOne: String, textTwo: String): TestDomainObject {
+                return TestDomainObject.Success("one","two")
+            }
+
+            override fun map(e: Exception): TestDomainObject {
+                return TestDomainObject.Failure(e)
+            }
+        }
 
 
     }
@@ -67,6 +84,17 @@ internal class AbstractTest {
     private interface TestDomainToUiMapper : Abstract.Mapper {
 
         fun map(): TestUiObject
+
+        fun map(exception: Exception): TestUiObject
+
+
+        class Base : TestDomainToUiMapper {
+
+
+            override fun map(): TestUiObject =  TestUiObject()
+
+            override fun map(exception: Exception): TestUiObject = TestUiObject()
+        }
 
     }
 
