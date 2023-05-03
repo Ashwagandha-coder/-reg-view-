@@ -1,7 +1,9 @@
 package com.example.religionapp.common.core
 
-import junit.framework.TestCase.assertEquals
+
 import org.junit.Test
+
+import org.junit.Assert.*
 
 
 internal class AbstractTest {
@@ -12,10 +14,21 @@ internal class AbstractTest {
         val mapper = TestDataToDomainMapper.Base()
         val domainObject = dataObject.map(mapper)
 
-        val expected = 0
-        val actual = 0
+        assertTrue(domainObject is TestDomainObject.Success)
 
-        assertEquals(expected, actual)
+
+    }
+
+    @Test
+    fun test_failure() {
+
+        assertEquals(3,2+2)
+
+    }
+
+
+    @Test
+    fun more_test_cases() {
 
 
     }
@@ -69,7 +82,7 @@ internal class AbstractTest {
 
         class Base() : TestDataToDomainMapper {
             override fun map(textOne: String, textTwo: String): TestDomainObject {
-                return TestDomainObject.Success("one","two")
+                return TestDomainObject.Success("one", "two")
             }
 
             override fun map(e: Exception): TestDomainObject {
@@ -91,7 +104,7 @@ internal class AbstractTest {
         class Base : TestDomainToUiMapper {
 
 
-            override fun map(): TestUiObject =  TestUiObject()
+            override fun map(): TestUiObject = TestUiObject()
 
             override fun map(exception: Exception): TestUiObject = TestUiObject()
         }
