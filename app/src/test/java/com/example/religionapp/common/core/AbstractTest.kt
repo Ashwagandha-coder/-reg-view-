@@ -22,16 +22,15 @@ internal class AbstractTest {
     @Test
     fun test_failure() {
 
-        assertEquals(3,2+2)
+        val dataObject = TestDataObject.Failure(java.lang.Exception())
+        val mapper = TestDataToDomainMapper.Base()
+        val domainObject = dataObject.map(mapper)
 
-    }
-
-
-    @Test
-    fun more_test_cases() {
+        assertTrue(domainObject is TestDomainObject.Failure)
 
 
     }
+
 
 
     private sealed class TestDataObject :
@@ -71,7 +70,16 @@ internal class AbstractTest {
 
     }
 
-    private class TestUiObject()
+    private sealed class TestUiObject: Abstract.Object<Unit, Abstract.Mapper.Empty>() {
+
+        abstract override fun map(mapper: Abstract.Mapper.Empty)
+
+        class Impl: TestUiObject() {
+            override fun map(mapper: Abstract.Mapper.Empty) {
+                TODO("Not yet implemented")
+            }
+        }
+    }
 
     private interface TestDataToDomainMapper : Abstract.Mapper {
 
@@ -104,9 +112,9 @@ internal class AbstractTest {
         class Base : TestDomainToUiMapper {
 
 
-            override fun map(): TestUiObject = TestUiObject()
+            override fun map(): TestUiObject = TestUiObject.Impl()
 
-            override fun map(exception: Exception): TestUiObject = TestUiObject()
+            override fun map(exception: Exception): TestUiObject = TestUiObject.Impl()
         }
 
     }
