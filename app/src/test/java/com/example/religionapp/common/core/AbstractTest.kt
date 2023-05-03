@@ -1,6 +1,5 @@
 package com.example.religionapp.common.core
 
-import android.widget.TextView
 import org.junit.Test
 
 
@@ -9,7 +8,8 @@ internal class AbstractTest {
     @Test
     fun test_success() {
         val dataObject = TestDataObject.Success("one_text", "two_text")
-
+        val exception = Exception("TestDataObject exception")
+        val dataObject_2 = TestDataObject.Failure(exception)
 
     }
 
@@ -44,7 +44,12 @@ internal class AbstractTest {
 
     }
 
-    private sealed class TestDomainObject
+    private sealed class TestDomainObject {
+
+
+
+
+    }
 
 
 }

@@ -1,7 +1,7 @@
 package com.example.religionapp.common.core
 
 /**
- * Любой обькт типа
+ * Любой обьект
  */
 
 
