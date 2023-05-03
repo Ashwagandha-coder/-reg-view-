@@ -35,6 +35,25 @@ internal class AbstractTest {
 
     }
 
+    private sealed class TestDomainObject : Abstract.Object<TestUiObject, TestDomainToUiMapper>() {
+
+        abstract override fun map(mapper: TestDomainToUiMapper): TestUiObject
+
+        class Success(): TestDomainObject() {
+
+            override fun map(mapper: TestDomainToUiMapper): TestUiObject = mapper.map()
+        }
+
+        class Failure(): TestDomainObject() {
+
+            override fun map(mapper: TestDomainToUiMapper): TestUiObject = mapper.map()
+        }
+
+
+    }
+
+    private sealed class TestUiObject
+
     private interface TestDomainToDataMapper : Abstract.Mapper {
 
         fun map(textOne: String, textTwo: String): TestDomainObject
@@ -44,27 +63,10 @@ internal class AbstractTest {
 
     }
 
-    private interface TestDataToDomainMapper : Abstract.Mapper {
-
-        fun map()
-
-
-    }
-
 
     private interface TestDomainToUiMapper : Abstract.Mapper {
 
-        fun map()
-
-    }
-
-    private interface TestUiToDomainMapper : Abstract.Mapper {
-
-        fun map()
-    }
-
-    private sealed class TestDomainObject {
-
+        fun map(): TestUiObject
 
     }
 
