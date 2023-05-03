@@ -11,6 +11,7 @@ internal class AbstractTest {
         val exception = Exception("TestDataObject exception")
         val dataObject_2 = TestDataObject.Failure(exception)
 
+
     }
 
 
@@ -20,8 +21,7 @@ internal class AbstractTest {
         abstract override fun map(mapper: TestDomainToDataMapper): TestDomainObject
 
 
-        class Success(private val textOne: String, private val textTwo: String) :
-            TestDataObject() {
+        class Success(private val textOne: String, private val textTwo: String) : TestDataObject() {
             override fun map(mapper: TestDomainToDataMapper): TestDomainObject =
                 mapper.map(textOne, textTwo)
 
@@ -44,9 +44,26 @@ internal class AbstractTest {
 
     }
 
+    private interface TestDataToDomainMapper : Abstract.Mapper {
+
+        fun map()
+
+
+    }
+
+
+    private interface TestDomainToUiMapper : Abstract.Mapper {
+
+        fun map()
+
+    }
+
+    private interface TestUiToDomainMapper : Abstract.Mapper {
+
+        fun map()
+    }
+
     private sealed class TestDomainObject {
-
-
 
 
     }
