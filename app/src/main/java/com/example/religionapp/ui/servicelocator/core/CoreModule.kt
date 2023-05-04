@@ -32,6 +32,7 @@ class CoreModule : BaseModule<MainViewModel> {
         // todo: 1.Add resource provider
         // todo: 2.Add Navigator and Mock Service
 
+
     }
 
 
