@@ -8,11 +8,10 @@ data class BooksRemoteModel(
     private val id: Int,
     @SerializedName("name")
     private val name: String
-): Abstract.Object<BooksData, BookRemoteToDataMapper>() {
+) : Abstract.Object<BooksData, BookRemoteToDataMapper>() {
 
-    override fun map(mapper: BookRemoteToDataMapper): BooksData {
-        TODO("Not yet implemented")
-    }
+    override fun map(mapper: BookRemoteToDataMapper): BooksData = mapper.map(id, name)
+
 
     fun doSome() {
 
