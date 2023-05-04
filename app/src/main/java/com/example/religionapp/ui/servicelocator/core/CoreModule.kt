@@ -1,10 +1,11 @@
 package com.example.religionapp.ui.servicelocator.core
 
-import android.app.Application
 import android.content.Context
 import com.example.religionapp.ui.viewmodel.MainViewModel
+import com.google.gson.Gson
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
+import retrofit2.Retrofit
 import java.util.concurrent.TimeUnit
 
 class CoreModule : BaseModule<MainViewModel> {
@@ -26,19 +27,25 @@ class CoreModule : BaseModule<MainViewModel> {
         TODO("Not yet implemented")
     }
 
-    fun activate(context: Context) {}
+    fun activate(context: Context) {
 
-
-    private fun buildRetrofit() {}
-
-    private fun buildClient() {
-
-        val client = OkHttpClient.Builder()
-            .connectTimeout(1, TimeUnit.MINUTES)
-            .readTimeout(1, TimeUnit.MINUTES)
-            .addInterceptor(loginInterceptor)
-            .build()
-
+        // todo: 1.Add resource provider
+        // todo: 2.Add Navigator and Mock Service
 
     }
+
+
+    private fun buildRetrofit() = Retrofit.Builder().baseUrl(BASE_URL).client(buildClient()).build()
+
+    private fun buildClient() =
+        OkHttpClient.Builder().connectTimeout(1, TimeUnit.MINUTES).readTimeout(1, TimeUnit.MINUTES)
+            .addInterceptor(loginInterceptor).build()
+
+
+    private fun buildGson(): Gson {
+        val gson = Gson()
+        return gson
+    }
+
+
 }
