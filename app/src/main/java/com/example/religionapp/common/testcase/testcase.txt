@@ -1,22 +1,10 @@
-1. Getting list book's without internet and cache
+1) Getting list book's without internet and cache
 
 Steps:
-1. Stop Internet
-2.
-
-
-
-
-
-2.
-
-
-
-
-3.
-
-
-
-
-
+1. Launch app from desktop
+View Error for dont internet connection and view button retry action
+2. Click Button "Retry action"
+View Error for dont internet connection and view button retry action
+3.On button retry action and load list books
+Show books post load list books
 4.
