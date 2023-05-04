@@ -12,4 +12,6 @@ sealed class BooksData: Abstract.Object<BookDomain, Abstract.Mapper.Empty>() {
 
 
 
+
+
 }
