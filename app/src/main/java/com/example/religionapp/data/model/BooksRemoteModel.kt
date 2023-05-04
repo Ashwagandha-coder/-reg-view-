@@ -13,4 +13,9 @@ data class BooksRemoteModel(
     override fun map(mapper: BookRemoteToDataMapper): BooksData {
         TODO("Not yet implemented")
     }
+
+    fun doSome() {
+
+
+    }
 }
