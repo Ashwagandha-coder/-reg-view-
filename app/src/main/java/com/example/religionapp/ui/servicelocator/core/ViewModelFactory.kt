@@ -1,4 +1,4 @@
-package com.example.religionapp.ui.viewmodel
+package com.example.religionapp.ui.servicelocator.core
 
 import androidx.lifecycle.ViewModelProvider
 
