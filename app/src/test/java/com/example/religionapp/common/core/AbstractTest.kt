@@ -1,6 +1,7 @@
 package com.example.religionapp.common.core
 
 
+import com.example.religionapp.ui.mappers.Abstract
 import org.junit.Test
 
 import org.junit.Assert.*

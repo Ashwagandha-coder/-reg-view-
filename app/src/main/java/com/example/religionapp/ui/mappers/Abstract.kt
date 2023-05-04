@@ -1,4 +1,4 @@
-package com.example.religionapp.common.core
+package com.example.religionapp.ui.mappers
 
 /**
  * Abstract is Base class for abstraction = package
