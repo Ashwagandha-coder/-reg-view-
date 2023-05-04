@@ -5,6 +5,9 @@ import com.example.religionapp.domain.BookDomain
 
 sealed class BooksData: Abstract.Object<BookDomain, Abstract.Mapper.Empty>() {
 
+
+
+
     // todo: Implementation class BookData
 
 
