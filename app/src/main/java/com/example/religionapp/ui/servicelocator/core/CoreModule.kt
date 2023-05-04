@@ -1,6 +1,7 @@
 package com.example.religionapp.ui.servicelocator.core
 
 import android.content.Context
+import androidx.constraintlayout.utils.widget.MockView
 import com.example.religionapp.ui.viewmodel.MainViewModel
 import com.google.gson.Gson
 import okhttp3.OkHttpClient
@@ -8,7 +9,7 @@ import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import java.util.concurrent.TimeUnit
 
-class CoreModule : BaseModule<MainViewModel> {
+class CoreModule(private val useMockView: MockView) : BaseModule<MainViewModel> {
 
     private val retrofit by lazy {
         buildRetrofit()
