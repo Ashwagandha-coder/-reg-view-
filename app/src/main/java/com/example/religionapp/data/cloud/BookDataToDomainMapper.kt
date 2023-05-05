@@ -7,7 +7,7 @@ interface BookDataToDomainMapper : Abstract.Mapper {
 
     fun map(): BookDomain
 
-    fun map(e: Exception)
+    fun map(e: Exception): BookDomain
 
 
     class Base() : BookDataToDomainMapper {
