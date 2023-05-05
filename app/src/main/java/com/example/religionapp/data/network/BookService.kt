@@ -1,6 +1,6 @@
 package com.example.religionapp.data.network
 
-import com.example.religionapp.data.model.BookData
+import com.example.religionapp.data.cloud.BookData
 import retrofit2.http.GET
 
 interface BookService {

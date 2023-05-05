@@ -1,4 +1,4 @@
-package com.example.religionapp.data.model
+package com.example.religionapp.data.cloud
 
 import com.example.religionapp.ui.mappers.Abstract
 import com.google.gson.annotations.SerializedName

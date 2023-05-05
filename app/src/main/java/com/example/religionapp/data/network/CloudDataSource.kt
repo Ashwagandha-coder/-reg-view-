@@ -1,6 +1,6 @@
 package com.example.religionapp.data.network
 
-import com.example.religionapp.data.model.BooksData
+import com.example.religionapp.data.cloud.BooksData
 
 interface CloudDataSource {
 
