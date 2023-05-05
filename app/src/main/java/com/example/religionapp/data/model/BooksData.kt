@@ -3,17 +3,11 @@ package com.example.religionapp.data.model
 import com.example.religionapp.ui.mappers.Abstract
 import com.example.religionapp.domain.BookDomain
 
-sealed class BooksData: Abstract.Object<BookDomain, Abstract.Mapper.Empty>() {
+sealed class BooksData : Abstract.Object<BookDomain, Abstract.Mapper.Empty>() {
 
+    abstract override fun map(mapper: Abstract.Mapper.Empty): BookDomain
 
-
-
-    // todo: Implementation class BookData
-
-
-
-
-
-
-
+    class Success() : BooksData {
+        override fun map(mapper: Abstract.Mapper.Empty): BookDomain =
+    }
 }

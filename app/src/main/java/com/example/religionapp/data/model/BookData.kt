@@ -3,7 +3,7 @@ package com.example.religionapp.data.model
 import com.example.religionapp.ui.mappers.Abstract
 import com.google.gson.annotations.SerializedName
 
-data class BooksRemoteModel(
+data class BookData(
     @SerializedName("id")
     private val id: Int,
     @SerializedName("name")
