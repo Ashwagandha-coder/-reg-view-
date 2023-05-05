@@ -9,6 +9,7 @@ sealed class BooksData : Abstract.Object<BookDomain, Abstract.Mapper.Empty>() {
 
     class Success() : BooksData() {
         override fun map(mapper: Abstract.Mapper.Empty): BookDomain {
+
         }
     }
 }
