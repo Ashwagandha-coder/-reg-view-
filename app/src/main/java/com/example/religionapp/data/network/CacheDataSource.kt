@@ -9,7 +9,8 @@ interface CacheDataSource {
 
     class Base(private val service: BookService) : CacheDataSource {
 
-        override suspend fun fetchBooks(): List<BookData> = service.fetchBooks()
+        override suspend fun fetchBooks(): List<BookData> = TODO()
     }
+
 
 }

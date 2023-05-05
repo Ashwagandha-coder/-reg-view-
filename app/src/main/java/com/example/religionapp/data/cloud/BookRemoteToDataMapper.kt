@@ -4,10 +4,10 @@ import com.example.religionapp.ui.mappers.Abstract
 
 interface BookRemoteToDataMapper : Abstract.Mapper {
 
-    fun map(id: Int, name: String): BooksData
+    fun map(id: Int, name: String): BooksDataWrapper
 
     class Base() : BookRemoteToDataMapper {
-        override fun map(id: Int, name: String): BooksData {
+        override fun map(id: Int, name: String): BooksDataWrapper {
             TODO("Not yet implemented")
         }
     }

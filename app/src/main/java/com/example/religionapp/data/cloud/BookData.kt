@@ -8,9 +8,9 @@ data class BookData(
     private val id: Int,
     @SerializedName("name")
     private val name: String
-) : Abstract.Object<BooksData, BookRemoteToDataMapper>() {
+) : Abstract.Object<BooksDataWrapper, BookRemoteToDataMapper>() {
 
-    override fun map(mapper: BookRemoteToDataMapper): BooksData = mapper.map(id, name)
+    override fun map(mapper: BookRemoteToDataMapper): BooksDataWrapper = mapper.map(id, name)
 
 
     fun doSome() {
