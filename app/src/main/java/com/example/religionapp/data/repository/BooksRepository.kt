@@ -10,11 +10,11 @@ interface BooksRepository {
 
     class Base(private val cacheDataSource: CacheDataSource) : BooksRepository {
         override suspend fun fetchBooks(): BooksData {
-            try {
+            return try {
                 val list = cacheDataSource.fetchBooks()
-                return BooksData.Success(list)
+                BooksData.Success(list)
             } catch (e: Exception) {
-                return BooksData.Failure(e)
+                BooksData.Failure(e)
             }
         }
     }
