@@ -1,4 +1,13 @@
 package com.example.religionapp.ui.viewmodel
 
-class MainViewModel: BaseViewModel() {
+import com.example.religionapp.data.cloud.BookData
+import com.example.religionapp.domain.usecase.BaseUseCase
+import com.example.religionapp.ui.core.Communication
+
+class MainViewModel(
+    private val useCase: BaseUseCase,
+    private val communication: Communication<BookData>
+) : BaseViewModel() {
+
+
 }
