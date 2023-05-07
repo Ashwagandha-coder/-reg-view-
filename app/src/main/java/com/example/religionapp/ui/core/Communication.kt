@@ -1,5 +1,7 @@
 package com.example.religionapp.ui.core
 
+import androidx.lifecycle.MutableLiveData
+
 interface Communication<Type> {
 
     fun setValue(data: Type)
@@ -7,13 +9,15 @@ interface Communication<Type> {
     fun postValue(data: Type)
 
 
-    class Base<T> : Communication<T> {
+    class Base<T>(
+        private val liveData: MutableLiveData<T> = MutableLiveData()
+    ) : Communication<T> {
         override fun setValue(data: T) {
-            TODO("Not yet implemented")
+            liveData.value = data
         }
 
         override fun postValue(data: T) {
-            TODO("Not yet implemented")
+            liveData.postValue(data)
         }
     }
 
