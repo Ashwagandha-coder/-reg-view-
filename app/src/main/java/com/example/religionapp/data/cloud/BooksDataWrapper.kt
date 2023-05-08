@@ -14,8 +14,6 @@ sealed class BooksDataWrapper : Abstract.Object<BookDomain, BookDataToDomainMapp
     }
 
     class Failure(private val exception: java.lang.Exception) : BooksDataWrapper() {
-        override fun map(mapper: BookDataToDomainMapper): BookDomain {
-            return BookDomain.Failure(exception)
-        }
+        override fun map(mapper: BookDataToDomainMapper) = mapper.map(exception)
     }
 }
