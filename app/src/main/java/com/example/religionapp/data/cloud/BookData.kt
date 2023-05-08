@@ -12,9 +12,12 @@ data class BookData(
 
     override fun map(mapper: BookRemoteToDataMapper): BooksDataWrapper = mapper.map(id, name)
 
+}
 
-    fun doSome() {
+
+interface BookDataCloud {
+
+    fun <T> map(mapper: Abstract.Mapper)
 
 
-    }
 }
