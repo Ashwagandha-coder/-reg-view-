@@ -9,6 +9,13 @@ interface BooksRepository {
     suspend fun fetchBooks(): BooksDataWrapper
 
 
+    class Base(private val param: Int, private val string: String) : BooksRepository {
+        override suspend fun fetchBooks(): BooksDataWrapper {
+            TODO("Not yet implemented")
+        }
+    }
+
+
     class CacheData(private val bookCacheDataSource: BookCacheDataSource) : BooksRepository {
         override suspend fun fetchBooks(): BooksDataWrapper {
             return try {
