@@ -1,6 +1,5 @@
 package com.example.religionapp.data.cloud
 
-import com.example.religionapp.data.ToBookMapper
 import com.example.religionapp.ui.mappers.Abstract
 import com.google.gson.annotations.SerializedName
 
@@ -11,15 +10,13 @@ data class BookCloud(
     private val name: String,
     @SerializedName("testament")
     private val testament: String
-) : Abstract.Object<BooksDataWrapper, BookRemoteToDataMapper>() {
+) : Abstract.Object<BooksDataWrapper, ToBookDataMapper>(), java.io.Serializable {
 
-    override fun map(mapper: BookRemoteToDataMapper): BooksDataWrapper = mapper.map(id, name)
+    override fun map(mapper: ToBookDataMapper): BooksDataWrapper = mapper.map(id, name, testament)
 
 }
 
 interface BookCloudTest {
-
-    fun <T> map(mapper: ToBookMapper<T>): T
 
 
 }
