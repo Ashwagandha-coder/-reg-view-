@@ -10,9 +10,7 @@ package com.example.religionapp.ui.mappers
 abstract class Abstract {
 
     abstract class Object<T, M : Mapper> {
-
         abstract fun map(mapper: M): T
-
 
     }
 

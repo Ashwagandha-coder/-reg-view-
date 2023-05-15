@@ -2,14 +2,12 @@ package com.example.religionapp.data.cloud
 
 import com.example.religionapp.ui.mappers.Abstract
 
-interface BookRemoteToDataMapper : Abstract.Mapper {
+interface BookRemoteToDataMapper<T> : Abstract.Mapper {
 
-    fun map(id: Int, name: String): BooksDataWrapper
+    fun map(id: Int, name: String, testament: String): BooksDataWrapper
 
-    class Base() : BookRemoteToDataMapper {
-        override fun map(id: Int, name: String): BooksDataWrapper {
-            TODO("Not yet implemented")
-        }
+    class Base() : BookRemoteToDataMapper<BooksDataWrapper> {
+        override fun map(id: Int, name: String, testament: String) = BooksDataWrapper
     }
 
 }

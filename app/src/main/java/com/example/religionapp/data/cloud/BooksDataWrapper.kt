@@ -8,6 +8,17 @@ sealed class BooksDataWrapper : Abstract.Object<BookDomain, BookDataToDomainMapp
     abstract override fun map(mapper: BookDataToDomainMapper): BookDomain
 
 
+    class Base(
+        private val id: Int,
+        private val name: String,
+        private val testament: String
+    ) : BooksDataWrapper() {
+        override fun map(mapper: BookDataToDomainMapper): BookDomain {
+            TODO("Not yet implemented")
+        }
+    }
+
+
     class Success(private val list: List<BookCloud>) : BooksDataWrapper() {
         override fun map(mapper: BookDataToDomainMapper) = mapper.map()
 
