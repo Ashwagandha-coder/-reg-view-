@@ -1,7 +1,17 @@
 package com.example.religionapp.data.cloud
 
-class BookCloud : BookCloudDataSource {
-    override suspend fun fetchBooks(): List<BookData> {
-        TODO("Not yet implemented")
-    }
+import com.example.religionapp.ui.mappers.Abstract
+import com.google.gson.annotations.SerializedName
+
+data class BookCloud(
+    @SerializedName("id")
+    private val id: Int,
+    @SerializedName("name")
+    private val name: String
+) : Abstract.Object<BooksDataWrapper, BookRemoteToDataMapper>() {
+
+    override fun map(mapper: BookRemoteToDataMapper): BooksDataWrapper = mapper.map(id, name)
+
 }
+
+
