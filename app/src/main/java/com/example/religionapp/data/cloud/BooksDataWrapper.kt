@@ -6,8 +6,6 @@ import com.example.religionapp.domain.BookDomain
 sealed class BooksDataWrapper : Abstract.Object<BookDomain, BookDataToDomainMapper>() {
 
     abstract override fun map(mapper: BookDataToDomainMapper): BookDomain
-
-
     class Base(
         private val id: Int,
         private val name: String,
@@ -17,13 +15,10 @@ sealed class BooksDataWrapper : Abstract.Object<BookDomain, BookDataToDomainMapp
             return BookDomain.Success(id, name, testament)
         }
     }
-
-
     class Success(private val list: List<BookCloud>) : BooksDataWrapper() {
         override fun map(mapper: BookDataToDomainMapper) = mapper.map()
 
     }
-
     class Failure(private val exception: java.lang.Exception) : BooksDataWrapper() {
         override fun map(mapper: BookDataToDomainMapper) = mapper.map(exception)
     }
