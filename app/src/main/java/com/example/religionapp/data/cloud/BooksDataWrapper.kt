@@ -14,7 +14,7 @@ sealed class BooksDataWrapper : Abstract.Object<BookDomain, BookDataToDomainMapp
         private val testament: String
     ) : BooksDataWrapper() {
         override fun map(mapper: BookDataToDomainMapper): BookDomain {
-            TODO("Not yet implemented")
+            return BookDomain.Success(id, name, testament)
         }
     }
 

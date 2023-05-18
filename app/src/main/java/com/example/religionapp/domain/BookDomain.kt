@@ -7,9 +7,13 @@ sealed class BookDomain : Abstract.Object<BookUi, Abstract.Mapper.Empty>() {
 
     abstract override fun map(mapper: Abstract.Mapper.Empty): BookUi
 
-    class Success() : BookDomain() {
+    class Success(
+        private val id: Int,
+        private val name: String,
+        private val testament: String
+    ) : BookDomain() {
         override fun map(mapper: Abstract.Mapper.Empty): BookUi {
-            TODO("Not yet implemented")
+            return BookUi.Base()
         }
     }
 

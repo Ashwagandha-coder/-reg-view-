@@ -6,9 +6,9 @@ sealed class BookUi(): Abstract.Object<Unit, Abstract.Mapper.Empty>() {
 
     // todo: interface Communication for data for UI
 
-
-
-    fun doSome() {
-
+    class Base() : BookUi() {
+        override fun map(mapper: Abstract.Mapper.Empty) {
+            TODO("Not yet implemented")
+        }
     }
 }
