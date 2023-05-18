@@ -13,9 +13,20 @@ interface BookCloudDataSource {
         }
     }
 
-
     class Base(private val service: BookService) : BookCloudDataSource {
         override suspend fun fetchBooks() = service.fetchBooks()
+    }
+
+    class English() : BookCloudDataSource {
+        override suspend fun fetchBooks(): List<BookCloud> {
+            TODO("Not yet implemented")
+        }
+    }
+
+    class Russian() : BookCloudDataSource {
+        override suspend fun fetchBooks(): List<BookCloud> {
+            TODO("Not yet implemented")
+        }
     }
 
 }
