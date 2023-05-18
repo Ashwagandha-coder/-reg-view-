@@ -2,8 +2,8 @@ package com.example.religionapp.common.core
 
 interface ChosenLanguage {
 
-    fun isChosenRussian()
+    fun isChosenRussian(): Boolean
 
-    fun isChosenEnglish()
+    fun isChosenEnglish(): Boolean
 
 }

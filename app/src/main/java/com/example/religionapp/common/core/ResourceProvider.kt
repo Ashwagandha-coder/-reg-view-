@@ -8,7 +8,7 @@ interface ResourceProvider {
 
     fun string(@StringRes name: String, vararg args: Any)
 
-    class Base(): ResourceProvider {
+    class Base : ResourceProvider {
 
         override fun string(id: Int) {
             TODO("Not yet implemented")
