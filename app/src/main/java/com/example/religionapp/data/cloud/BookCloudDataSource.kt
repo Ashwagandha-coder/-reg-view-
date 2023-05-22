@@ -39,12 +39,18 @@ interface BookCloudDataSource {
         override suspend fun fetchBooks(): List<BookCloud> {
             TODO("Not yet implemented")
         }
+
+        fun test() {}
     }
 
     class Russian() : BookCloudDataSource {
         override suspend fun fetchBooks(): List<BookCloud> {
             TODO("Not yet implemented")
         }
+
+
+        fun test() {}
     }
+
 
 }
