@@ -1,9 +1,6 @@
 package com.example.religionapp.ui.core
 
-import kotlinx.coroutines.CoroutineDispatcher
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Job
-import kotlinx.coroutines.launch
+import kotlinx.coroutines.*
 
 interface Dispatchers {
 
@@ -44,14 +41,17 @@ interface Dispatchers {
         override fun launchHandle(
             scope: CoroutineScope,
             block: suspend CoroutineScope.() -> Unit
-        ): Job {
+        ): Job =
             scope.launch(handle, block = block)
-        }
     }
 
 
-    class Base() :
-        Abstract(ui = kotlinx.coroutines.Dispatchers.IO, main = kotlinx.coroutines.Dispatchers.Main)
-
+    class Base() : Dispatchers.Abstract(
+        ui = kotlinx.coroutines.Dispatchers.IO,
+        main = kotlinx.coroutines.Dispatchers.Main,
+        default = kotlinx.coroutines.Dispatchers.Default,
+        handle = kotlinx.coroutines.Dispatchers.Unconfined
+    )
 
 }
+
