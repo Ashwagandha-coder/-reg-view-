@@ -9,6 +9,10 @@ interface Dispatchers {
 
     fun launchUi(scope: CoroutineScope, block: suspend CoroutineScope.() -> Unit): Job
 
+    fun launchDefault(scope: CoroutineScope, block: suspend CoroutineScope.() -> Unit): Job
+
+    fun launchHandle(scope: CoroutineScope, block: suspend CoroutineScope.() -> Unit): Job
+
     fun launchMain(scope: CoroutineScope, block: suspend CoroutineScope.() -> Unit): Job
 
 
@@ -27,6 +31,20 @@ interface Dispatchers {
             block: suspend CoroutineScope.() -> Unit
         ): Job =
             scope.launch(main, block = block)
+
+        override fun launchDefault(
+            scope: CoroutineScope,
+            block: suspend CoroutineScope.() -> Unit
+        ): Job {
+            TODO()
+        }
+
+        override fun launchHandle(
+            scope: CoroutineScope,
+            block: suspend CoroutineScope.() -> Unit
+        ): Job {
+            TODO("Not yet implemented")
+        }
     }
 
 
