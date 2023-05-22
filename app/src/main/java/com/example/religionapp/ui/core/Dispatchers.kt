@@ -18,7 +18,8 @@ interface Dispatchers {
 
     abstract class Abstract(
         private val ui: CoroutineDispatcher,
-        private val main: CoroutineDispatcher
+        private val main: CoroutineDispatcher,
+        private val default: CoroutineDispatcher
     ) : Dispatchers {
         override fun launchUi(
             scope: CoroutineScope,
@@ -35,9 +36,9 @@ interface Dispatchers {
         override fun launchDefault(
             scope: CoroutineScope,
             block: suspend CoroutineScope.() -> Unit
-        ): Job {
-            TODO()
-        }
+        ): Job =
+            scope.launch(default, block = block)
+
 
         override fun launchHandle(
             scope: CoroutineScope,
