@@ -8,7 +8,7 @@ interface Dispatchers {
 
     fun launchDefault(scope: CoroutineScope, block: suspend CoroutineScope.() -> Unit): Job
 
-    fun launchHandle(scope: CoroutineScope, block: suspend CoroutineScope.() -> Unit): Job
+    fun launchUnconfined(scope: CoroutineScope, block: suspend CoroutineScope.() -> Unit): Job
 
     fun launchMain(scope: CoroutineScope, block: suspend CoroutineScope.() -> Unit): Job
 
@@ -38,7 +38,7 @@ interface Dispatchers {
             scope.launch(default, block = block)
 
 
-        override fun launchHandle(
+        override fun launchUnconfined(
             scope: CoroutineScope,
             block: suspend CoroutineScope.() -> Unit
         ): Job =
