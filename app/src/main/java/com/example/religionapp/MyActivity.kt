@@ -7,12 +7,14 @@ import android.app.TaskStackBuilder
 import android.content.Intent
 import android.os.Bundle
 import android.os.IBinder
+import android.os.Parcel
+import android.os.Parcelable
 import android.view.Choreographer
-import androidx.appcompat.app.AppCompatActivity
 import com.example.religionapp.ui.activity.MainActivity
 import javax.net.ssl.X509TrustManager
 
 class MyActivity : AppCompatActivity() {
+
 
     private lateinit var activityRecord: ActivityRecord
     private lateinit var activityMangerService: ActivityManager
@@ -32,6 +34,11 @@ class MyActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        val num = 1
+        val obj = MyAny()
+
+        savedInstanceState?.putInt("num", 1)
+        savedInstanceState?.putParcelable("obj", obj)
     }
 
     fun test() {
@@ -42,4 +49,29 @@ class MyActivity : AppCompatActivity() {
     }
 
 
+}
+
+class MyAny() : Parcelable {
+
+
+    constructor(parcel: Parcel) : this() {
+    }
+
+    override fun describeContents(): Int {
+        TODO("Not yet implemented")
+    }
+
+    override fun writeToParcel(p0: Parcel, p1: Int) {
+        TODO("Not yet implemented")
+    }
+
+    companion object CREATOR : Parcelable.Creator<MyAny> {
+        override fun createFromParcel(parcel: Parcel): MyAny {
+            return MyAny(parcel)
+        }
+
+        override fun newArray(size: Int): Array<MyAny?> {
+            return arrayOfNulls(size)
+        }
+    }
 }
