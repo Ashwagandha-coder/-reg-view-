@@ -10,10 +10,19 @@ import android.os.IBinder
 import android.os.Parcel
 import android.os.Parcelable
 import android.view.Choreographer
+import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.ViewModelLazy
+import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.ViewModelStore
 import com.example.religionapp.ui.activity.MainActivity
 import javax.net.ssl.X509TrustManager
 
 class MyActivity : AppCompatActivity() {
+
+    private val viewModel by viewModels()
+    private val viewModelLazy: ViewModelLazy
+    private val viewModelStore: ViewModelStore
+    private val viewModelProvider: ViewModelProvider
 
 
     private lateinit var activityRecord: ActivityRecord
