@@ -20,8 +20,10 @@ import javax.net.ssl.X509TrustManager
 class MyActivity : AppCompatActivity() {
 
     private val viewModel: MyViewModel by activityViewModel()
+    private val otherViewModel: MyViewModel by viewModels()
     private val viewModelLazy: ViewModelLazy
-    private val viewModelStore: ViewModelStore
+
+    //private val viewModelStore: ViewModelStore
     private val viewModelProvider: ViewModelProvider
 
 
@@ -54,6 +56,11 @@ class MyActivity : AppCompatActivity() {
 
         val intent = Intent(this, MainActivity::class.java)
         startActivity(intent)
+
+    }
+
+    fun otherTest() {
+        val param = viewModelStore
 
     }
 
