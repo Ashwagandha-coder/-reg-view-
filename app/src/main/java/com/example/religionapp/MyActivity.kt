@@ -19,7 +19,7 @@ import javax.net.ssl.X509TrustManager
 
 class MyActivity : AppCompatActivity() {
 
-    private val viewModel by viewModels()
+    private val viewModel: MyViewModel by activityViewModel()
     private val viewModelLazy: ViewModelLazy
     private val viewModelStore: ViewModelStore
     private val viewModelProvider: ViewModelProvider
