@@ -9,14 +9,14 @@ interface Communication<Type> {
     fun postValue(data: Type)
 
 
-    class Base<T>(
-        private val liveData: MutableLiveData<T> = MutableLiveData()
-    ) : Communication<T> {
-        override fun setValue(data: T) {
+    class Base<Type>(
+        private val liveData: MutableLiveData<Type> = MutableLiveData()
+    ) : Communication<Type> {
+        override fun setValue(data: Type) {
             liveData.value = data
         }
 
-        override fun postValue(data: T) {
+        override fun postValue(data: Type) {
             liveData.postValue(data)
         }
     }
