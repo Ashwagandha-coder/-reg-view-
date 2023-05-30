@@ -15,6 +15,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleObserver
 import com.example.religionapp.ui.activity.MainActivity
+import java.util.concurrent.Executors
 import javax.net.ssl.X509TrustManager
 
 class MyActivity : AppCompatActivity() {
@@ -24,6 +25,7 @@ class MyActivity : AppCompatActivity() {
     private val lifecycleObserver: LifecycleObserver
 
     private val apk: ApkChecksum
+    private val executors: Executors
 
 
     private lateinit var activityRecord: ActivityRecord
