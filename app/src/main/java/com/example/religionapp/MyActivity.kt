@@ -5,6 +5,7 @@ import android.app.ActivityManager
 import android.app.PendingIntent
 import android.app.TaskStackBuilder
 import android.content.Intent
+import android.content.pm.ApkChecksum
 import android.os.Bundle
 import android.os.IBinder
 import android.os.Parcel
@@ -21,6 +22,8 @@ class MyActivity : AppCompatActivity() {
     private val viewModel: AnyViewModel by viewModels()
     private val lifecycle: Lifecycle
     private val lifecycleObserver: LifecycleObserver
+
+    private val apk: ApkChecksum
 
 
     private lateinit var activityRecord: ActivityRecord
