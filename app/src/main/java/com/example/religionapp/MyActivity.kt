@@ -12,6 +12,7 @@ import android.os.Parcelable
 import android.view.Choreographer
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Lifecycle
+import androidx.lifecycle.LifecycleObserver
 import com.example.religionapp.ui.activity.MainActivity
 import javax.net.ssl.X509TrustManager
 
@@ -19,6 +20,7 @@ class MyActivity : AppCompatActivity() {
 
     private val viewModel: AnyViewModel by viewModels()
     private val lifecycle: Lifecycle
+    private val lifecycleObserver: LifecycleObserver
 
 
     private lateinit var activityRecord: ActivityRecord
