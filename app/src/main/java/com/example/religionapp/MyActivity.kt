@@ -27,6 +27,7 @@ class MyActivity : AppCompatActivity() {
     private val apk: ApkChecksum
     private val executors: Executors
     private val synchronized: Synchronized
+    private val volatile: Volatile
 
 
     private lateinit var activityRecord: ActivityRecord
