@@ -26,6 +26,7 @@ class MyActivity : AppCompatActivity() {
 
     private val apk: ApkChecksum
     private val executors: Executors
+    private val synchronized: Synchronized
 
 
     private lateinit var activityRecord: ActivityRecord
