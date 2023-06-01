@@ -33,6 +33,7 @@ class MyActivity : AppCompatActivity() {
     private val volatile: Volatile
     private val phoneManager
     private val zygoteProcess: Process
+    private val happensBefore: HappensBefore
 
 
     private lateinit var activityRecord: ActivityRecord
