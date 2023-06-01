@@ -31,6 +31,8 @@ class MyActivity : AppCompatActivity() {
     private val executors: Executors
     private val synchronized: Synchronized
     private val volatile: Volatile
+    private val phoneManager
+    private val zygoteProcess: Process
 
 
     private lateinit var activityRecord: ActivityRecord
