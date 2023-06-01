@@ -4,6 +4,7 @@ import android.app.Activity
 import android.app.ActivityManager
 import android.app.PendingIntent
 import android.app.TaskStackBuilder
+import android.app.ZygotePreload
 import android.content.Intent
 import android.content.pm.ApkChecksum
 import android.os.Bundle
@@ -23,9 +24,10 @@ class MyActivity : AppCompatActivity() {
     private val viewModel: AnyViewModel by viewModels()
     private val lifecycle: Lifecycle
     private val lifecycleObserver: LifecycleObserver
-    private val r: R
 
     private val apk: ApkChecksum
+    private val zygote: ZygotePreload
+    private val classLoader: ClassLoader
     private val executors: Executors
     private val synchronized: Synchronized
     private val volatile: Volatile
