@@ -19,3 +19,4 @@ class UsersHolderSingleton private constructor(
             return instance!!
         }
     }
+}
