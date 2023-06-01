@@ -23,6 +23,7 @@ class MyActivity : AppCompatActivity() {
     private val viewModel: AnyViewModel by viewModels()
     private val lifecycle: Lifecycle
     private val lifecycleObserver: LifecycleObserver
+    private val r: R
 
     private val apk: ApkChecksum
     private val executors: Executors
