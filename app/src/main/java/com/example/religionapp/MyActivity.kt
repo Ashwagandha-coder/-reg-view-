@@ -17,6 +17,8 @@ import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleObserver
 import com.example.religionapp.ui.activity.MainActivity
 import java.util.concurrent.Executors
+import java.util.concurrent.atomic.AtomicInteger
+import java.util.concurrent.atomic.AtomicIntegerArray
 import java.util.concurrent.atomic.AtomicLong
 import javax.net.ssl.X509TrustManager
 
@@ -37,6 +39,9 @@ class MyActivity : AppCompatActivity() {
     private val happensBefore: HappensBefore
     private val atomicLong: AtomicLong
     private val myObject: Object
+
+    private val atomicInteger: AtomicInteger
+    private val atomicIntegerArray: AtomicIntegerArray
 
 
     private lateinit var activityRecord: ActivityRecord
