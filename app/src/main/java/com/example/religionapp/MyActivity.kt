@@ -17,7 +17,10 @@ import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleObserver
 import com.example.religionapp.ui.activity.MainActivity
 import java.util.concurrent.Callable
+import java.util.concurrent.Executor
+import java.util.concurrent.ExecutorService
 import java.util.concurrent.Executors
+import java.util.concurrent.ScheduledExecutorService
 import java.util.concurrent.atomic.AtomicInteger
 import java.util.concurrent.atomic.AtomicIntegerArray
 import java.util.concurrent.atomic.AtomicLong
@@ -47,6 +50,10 @@ class MyActivity : AppCompatActivity() {
     private val runnable: Runnable
     private val callable: Callable
     private val thread: Thread
+
+    private val executor: Executor
+    private val executorService: ExecutorService
+    private val scheduledExecutorsService: ScheduledExecutorService
 
 
     private lateinit var activityRecord: ActivityRecord
