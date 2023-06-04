@@ -1,4 +1,4 @@
-package com.example.religionapp
+package com.example.religionapp.other
 
 class TestCompanionObject {
 
