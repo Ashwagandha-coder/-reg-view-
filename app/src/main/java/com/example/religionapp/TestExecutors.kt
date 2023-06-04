@@ -43,6 +43,14 @@ class TestExecutors {
 
     }
 
+    fun newScheduledThreadPool() {
+
+        val executors = Executors.newScheduledThreadPool(5)
+        val impl = Impl()
+        executors.execute(impl)
+
+    }
+
 }
 
 class Impl : Runnable {
