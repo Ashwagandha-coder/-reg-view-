@@ -17,5 +17,18 @@ class TestExecutors {
 
     }
 
+    fun newSingleThread() {
 
+        val executor = Executors.newSingleThreadExecutor()
+        val impl = Impl()
+        executor.execute(impl)
+
+    }
+    
+}
+
+class Impl : Runnable {
+    override fun run() {
+        TODO("Not yet implemented")
+    }
 }
