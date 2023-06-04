@@ -1,8 +1,10 @@
 package com.example.religionapp
 
+import java.util.concurrent.Exchanger
 import java.util.concurrent.Executor
 import java.util.concurrent.ExecutorService
 import java.util.concurrent.Executors
+import java.util.concurrent.ForkJoinPool
 import java.util.concurrent.ScheduledExecutorService
 
 class TestExecutors {
@@ -48,6 +50,19 @@ class TestExecutors {
         val executors = Executors.newScheduledThreadPool(5)
         val impl = Impl()
         executors.execute(impl)
+
+    }
+
+    fun exchanger() {
+
+        val exchanger: Exchanger<Any> = Exchanger()
+
+
+    }
+
+    fun forkJoinPool() {
+
+        val forkJoinPool: ForkJoinPool = ForkJoinPool()
 
     }
 
