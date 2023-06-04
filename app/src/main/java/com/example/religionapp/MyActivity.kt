@@ -16,6 +16,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleObserver
 import com.example.religionapp.ui.activity.MainActivity
+import java.util.concurrent.Callable
 import java.util.concurrent.Executors
 import java.util.concurrent.atomic.AtomicInteger
 import java.util.concurrent.atomic.AtomicIntegerArray
@@ -42,6 +43,10 @@ class MyActivity : AppCompatActivity() {
 
     private val atomicInteger: AtomicInteger
     private val atomicIntegerArray: AtomicIntegerArray
+
+    private val runnable: Runnable
+    private val callable: Callable
+    private val thread: Thread
 
 
     private lateinit var activityRecord: ActivityRecord
