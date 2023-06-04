@@ -24,7 +24,25 @@ class TestExecutors {
         executor.execute(impl)
 
     }
-    
+
+    fun newFixedThreadPool() {
+
+        val executor = Executors.newFixedThreadPool(5)
+        val impl = Impl()
+        executor.execute(impl)
+
+
+    }
+
+    fun newCachedThreadPool() {
+
+        val executors = Executors.newCachedThreadPool()
+        val impl = Impl()
+        executors.execute(impl)
+
+
+    }
+
 }
 
 class Impl : Runnable {
