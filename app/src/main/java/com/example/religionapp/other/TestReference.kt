@@ -25,6 +25,8 @@ class TestReference {
 
     fun strong() {}
 
+    fun queue() {}
+
     fun method() {
 
         val myObject = Object()
