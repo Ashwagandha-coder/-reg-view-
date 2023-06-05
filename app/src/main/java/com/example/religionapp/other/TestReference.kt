@@ -20,7 +20,12 @@ class TestReference {
 
     fun phantom() {}
 
-    fun weak() {}
+    fun weak() {
+
+        val string = ""
+        val weakReference = WeakReference<String>(string)
+
+    }
 
     fun soft() {
 
