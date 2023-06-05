@@ -17,6 +17,14 @@ class TestReference {
 
     }
 
+    fun phantom() {}
+
+    fun weak() {}
+
+    fun soft() {}
+
+    fun strong() {}
+
     fun method() {
 
         val myObject = Object()
