@@ -2,6 +2,8 @@ package com.example.religionapp.other
 
 import java.lang.ref.SoftReference
 import java.lang.ref.WeakReference
+import java.util.*
+import java.util.concurrent.atomic.AtomicLong
 
 class TestReference {
 
@@ -12,6 +14,21 @@ class TestReference {
         val reference: WeakReference<Any> = WeakReference<Any>(any)
         val softReference = SoftReference<Any>(any)
 
+
+    }
+
+    fun method() {
+
+        val myObject = Object()
+        val atomicLong = AtomicLong()
+
+    }
+
+
+    fun stack() {
+
+        val stack: Stack<Int> = Stack()
+        val vector: Vector<Int> = Vector()
 
     }
 
