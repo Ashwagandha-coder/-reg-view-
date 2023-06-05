@@ -1,5 +1,6 @@
 package com.example.religionapp.other
 
+import java.lang.ref.ReferenceQueue
 import java.lang.ref.SoftReference
 import java.lang.ref.WeakReference
 import java.util.*
@@ -21,11 +22,23 @@ class TestReference {
 
     fun weak() {}
 
-    fun soft() {}
+    fun soft() {
 
-    fun strong() {}
+        val string = ""
+        val softReference = SoftReference<String>(string)
 
-    fun queue() {}
+    }
+
+    fun strong() {
+
+        val string = ""
+    }
+
+    fun queue() {
+
+        val referenceQueue = ReferenceQueue<Int>()
+
+    }
 
     fun method() {
 
