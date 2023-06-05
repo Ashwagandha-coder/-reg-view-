@@ -1,5 +1,6 @@
 package com.example.religionapp.other
 
+import java.lang.ref.PhantomReference
 import java.lang.ref.ReferenceQueue
 import java.lang.ref.SoftReference
 import java.lang.ref.WeakReference
@@ -18,7 +19,13 @@ class TestReference {
 
     }
 
-    fun phantom() {}
+    fun phantom() {
+
+        val string = ""
+        val queue = ReferenceQueue<String>()
+        val phantomReference = PhantomReference<String>(string, queue)
+
+    }
 
     fun weak() {
 
