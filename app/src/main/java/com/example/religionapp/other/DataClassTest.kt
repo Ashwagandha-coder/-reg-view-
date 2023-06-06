@@ -1,4 +1,4 @@
 package com.example.religionapp.other
 
-class DataClassTest {
+data class DataClassTest {
 }
