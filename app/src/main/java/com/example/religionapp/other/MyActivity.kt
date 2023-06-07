@@ -27,15 +27,8 @@ import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleObserver
 import androidx.recyclerview.widget.RecyclerView
 import com.example.religionapp.ui.activity.MainActivity
-import com.example.religionapp.ui.core.Dispatchers
 import com.google.android.material.snackbar.Snackbar
 import kotlinx.coroutines.AbstractCoroutine
-import java.util.concurrent.Callable
-import java.util.concurrent.Executor
-import java.util.concurrent.ExecutorService
-import java.util.concurrent.ScheduledExecutorService
-import java.util.concurrent.atomic.AtomicInteger
-import java.util.concurrent.atomic.AtomicIntegerArray
 import javax.net.ssl.X509TrustManager
 
 class MyActivity : AppCompatActivity() {
