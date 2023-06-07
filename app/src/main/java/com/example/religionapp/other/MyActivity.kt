@@ -61,6 +61,7 @@ class MyActivity : AppCompatActivity() {
     private val components: Components
     private val snackBar: Snackbar
     private val toast: Toast
+    private val intent: Intent
 
     // libs
     private val coroutine: AbstractCoroutine<Int>
