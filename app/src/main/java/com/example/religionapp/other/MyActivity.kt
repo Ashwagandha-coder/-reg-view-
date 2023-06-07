@@ -8,6 +8,7 @@ import android.app.TaskStackBuilder
 import android.content.BroadcastReceiver
 import android.content.ContentProvider
 import android.content.Intent
+import android.content.pm.ModuleInfo
 import android.os.Binder
 import android.os.Bundle
 import android.os.Handler
@@ -27,6 +28,7 @@ import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleObserver
 import androidx.recyclerview.widget.RecyclerView
 import com.example.religionapp.ui.activity.MainActivity
+import com.example.religionapp.ui.mappers.Abstract
 import com.google.android.material.snackbar.Snackbar
 import kotlinx.coroutines.AbstractCoroutine
 import javax.net.ssl.X509TrustManager
@@ -62,6 +64,7 @@ class MyActivity : AppCompatActivity() {
     private val snackBar: Snackbar
     private val toast: Toast
     private val intent: Intent
+    private val multiModules: ModuleInfo
 
     // libs
     private val coroutine: AbstractCoroutine<Int>
