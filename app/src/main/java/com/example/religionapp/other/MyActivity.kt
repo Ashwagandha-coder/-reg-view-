@@ -4,9 +4,7 @@ import android.app.Activity
 import android.app.ActivityManager
 import android.app.PendingIntent
 import android.app.TaskStackBuilder
-import android.app.ZygotePreload
 import android.content.Intent
-import android.content.pm.ApkChecksum
 import android.os.Bundle
 import android.os.IBinder
 import android.os.Parcel
@@ -19,42 +17,16 @@ import com.example.religionapp.ui.activity.MainActivity
 import java.util.concurrent.Callable
 import java.util.concurrent.Executor
 import java.util.concurrent.ExecutorService
-import java.util.concurrent.Executors
 import java.util.concurrent.ScheduledExecutorService
 import java.util.concurrent.atomic.AtomicInteger
 import java.util.concurrent.atomic.AtomicIntegerArray
-import java.util.concurrent.atomic.AtomicLong
 import javax.net.ssl.X509TrustManager
 
 class MyActivity : AppCompatActivity() {
 
-    private val viewModel: AnyViewModel by viewModels()
     private val lifecycle: Lifecycle
     private val lifecycleObserver: LifecycleObserver
-
-    private val apk: ApkChecksum
-    private val zygote: ZygotePreload
-    private val classLoader: ClassLoader
-    private val executors: Executors
-    private val synchronized: Synchronized
-    private val volatile: Volatile
-    private val phoneManager
-    private val zygoteProcess: Process
-    private val happensBefore: HappensBefore
-    private val atomicLong: AtomicLong
-    private val myObject: Object
-
-    private val atomicInteger: AtomicInteger
-    private val atomicIntegerArray: AtomicIntegerArray
-
-    private val runnable: Runnable
-    private val callable: Callable
-    private val thread: Thread
-
-    private val executor: Executor
-    private val executorService: ExecutorService
-    private val scheduledExecutorsService: ScheduledExecutorService
-
+    
 
     private lateinit var activityRecord: ActivityRecord
     private lateinit var activityMangerService: ActivityManager
