@@ -18,6 +18,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleObserver
+import androidx.recyclerview.widget.RecyclerView
 import com.example.religionapp.ui.activity.MainActivity
 import java.util.concurrent.Callable
 import java.util.concurrent.Executor
@@ -45,6 +46,9 @@ class MyActivity : AppCompatActivity() {
     private val handler: Handler
     private val looper: Looper
     private val messageQueue: MessageQueue
+
+    private val recyclerView: RecyclerView
+    private val glide_cacheStrategy: Glide
 
 
     private lateinit var choreographer: Choreographer
