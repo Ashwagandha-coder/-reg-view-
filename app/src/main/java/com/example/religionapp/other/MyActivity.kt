@@ -5,12 +5,17 @@ import android.app.ActivityManager
 import android.app.PendingIntent
 import android.app.TaskStackBuilder
 import android.content.Intent
+import android.os.Binder
 import android.os.Bundle
+import android.os.Handler
 import android.os.IBinder
+import android.os.Looper
+import android.os.MessageQueue
 import android.os.Parcel
 import android.os.Parcelable
 import android.view.Choreographer
 import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.Fragment
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleObserver
 import com.example.religionapp.ui.activity.MainActivity
@@ -26,7 +31,7 @@ class MyActivity : AppCompatActivity() {
 
     private val lifecycle: Lifecycle
     private val lifecycleObserver: LifecycleObserver
-    
+
 
     private lateinit var activityRecord: ActivityRecord
     private lateinit var activityMangerService: ActivityManager
@@ -34,12 +39,17 @@ class MyActivity : AppCompatActivity() {
     private lateinit var task: TaskStackBuilder
     private lateinit var iBinder: IBinder
     private lateinit var system: System
+    private val binder: Binder
+
+    private val fragment: Fragment
+    private val handler: Handler
+    private val looper: Looper
+    private val messageQueue: MessageQueue
 
 
     private lateinit var choreographer: Choreographer
     private lateinit var intent: Intent
     private lateinit var pendingIntent: PendingIntent
-
 
     private lateinit var x509TrustManager: X509TrustManager
 
