@@ -20,6 +20,7 @@ import android.os.Parcelable
 import android.view.Choreographer
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
@@ -28,6 +29,7 @@ import androidx.lifecycle.LifecycleObserver
 import androidx.recyclerview.widget.RecyclerView
 import com.example.religionapp.ui.activity.MainActivity
 import com.example.religionapp.ui.core.Dispatchers
+import com.google.android.material.snackbar.Snackbar
 import kotlinx.coroutines.AbstractCoroutine
 import java.util.concurrent.Callable
 import java.util.concurrent.Executor
@@ -65,6 +67,8 @@ class MyActivity : AppCompatActivity() {
     private val view: View
     private val viewGroup: ViewGroup
     private val components: Components
+    private val snackBar: Snackbar
+    private val toast: Toast
 
     // libs
     private val coroutine: AbstractCoroutine<Int>
