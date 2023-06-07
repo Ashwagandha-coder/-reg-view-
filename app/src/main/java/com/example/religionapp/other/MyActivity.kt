@@ -3,6 +3,7 @@ package com.example.religionapp
 import android.app.Activity
 import android.app.ActivityManager
 import android.app.PendingIntent
+import android.app.Service
 import android.app.TaskStackBuilder
 import android.content.Intent
 import android.os.Binder
@@ -16,6 +17,7 @@ import android.os.Parcelable
 import android.view.Choreographer
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentManager
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleObserver
 import androidx.recyclerview.widget.RecyclerView
@@ -43,9 +45,14 @@ class MyActivity : AppCompatActivity() {
     private val binder: Binder
 
     private val fragment: Fragment
+    private val fragmentManager: FragmentManager
+
+
     private val handler: Handler
     private val looper: Looper
     private val messageQueue: MessageQueue
+    private val service: Service
+    
 
     private val recyclerView: RecyclerView
     private val glide_cacheStrategy: Glide
