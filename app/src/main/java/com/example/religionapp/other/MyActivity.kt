@@ -49,7 +49,7 @@ class MyActivity : AppCompatActivity() {
 
     private val fragment: Fragment
     private val fragmentManager: FragmentManager
-
+    
 
     private val handler: Handler
     private val looper: Looper
@@ -63,7 +63,6 @@ class MyActivity : AppCompatActivity() {
     private val components: Components
     private val snackBar: Snackbar
     private val toast: Toast
-    private val intent: Intent
     private val multiModules: ModuleInfo
 
     // libs
