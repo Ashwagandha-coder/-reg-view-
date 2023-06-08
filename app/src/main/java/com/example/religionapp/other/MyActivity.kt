@@ -49,7 +49,9 @@ class MyActivity : AppCompatActivity() {
 
     private val fragment: Fragment
     private val fragmentManager: FragmentManager
-    
+
+    private val proguardFile: Proguard.Pro
+
 
     private val handler: Handler
     private val looper: Looper
