@@ -31,6 +31,7 @@ import com.example.religionapp.ui.activity.MainActivity
 import com.example.religionapp.ui.mappers.Abstract
 import com.google.android.material.snackbar.Snackbar
 import kotlinx.coroutines.AbstractCoroutine
+import okhttp3.internal.platform.android.AndroidSocketAdapter
 import javax.net.ssl.X509TrustManager
 
 class MyActivity : AppCompatActivity() {
@@ -42,15 +43,19 @@ class MyActivity : AppCompatActivity() {
     private lateinit var activityRecord: ActivityRecord
     private lateinit var activityMangerService: ActivityManager
     private lateinit var activity: Activity
+
     private lateinit var task: TaskStackBuilder
     private lateinit var iBinder: IBinder
     private lateinit var system: System
     private val binder: Binder
 
+
     private val fragment: Fragment
     private val fragmentManager: FragmentManager
 
     private val proguardFile: Proguard.Pro
+    private val aidl: Android.Aidl
+    private val android: AndroidSocketAdapter
 
 
     private val handler: Handler
