@@ -7,11 +7,8 @@ class TestHashMap {
 
 
     fun make() {
-
-
         hashMap.put()
         hashMap.get()
-
 
     }
 
