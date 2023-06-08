@@ -44,6 +44,7 @@ class MyActivity : AppCompatActivity() {
     private lateinit var activityMangerService: ActivityManager
     private lateinit var activity: Activity
 
+
     private lateinit var task: TaskStackBuilder
     private lateinit var iBinder: IBinder
     private lateinit var system: System
