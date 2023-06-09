@@ -73,7 +73,6 @@ class Constants {
 
     // libs
     private val coroutine: AbstractCoroutine<Int>
-
     private val glide_cacheStrategy: Glide
 
 
