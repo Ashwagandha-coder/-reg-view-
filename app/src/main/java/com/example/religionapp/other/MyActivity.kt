@@ -81,8 +81,10 @@ class MyActivity : AppCompatActivity() {
 
     // collection
     private val collection: Collection
-    private val arrayList: ArrayList
     private val list: List
+    private val map: Map
+    private val set: Set
+    private val concurrentCollection
 
     // libs
     private val coroutine: AbstractCoroutine<Int>
