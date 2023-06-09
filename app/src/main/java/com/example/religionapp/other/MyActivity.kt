@@ -26,6 +26,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleObserver
+import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.example.religionapp.ui.activity.MainActivity
 import com.example.religionapp.ui.mappers.Abstract
@@ -66,12 +67,16 @@ class MyActivity : AppCompatActivity() {
     private val broadcastReceiver: BroadcastReceiver
     private val contentProvider: ContentProvider
 
+    private val multiModules: ModuleInfo
+
+
     private val view: View
     private val viewGroup: ViewGroup
     private val components: Components
     private val snackBar: Snackbar
     private val toast: Toast
-    private val multiModules: ModuleInfo
+    private val recyclerView: RecyclerView
+    private val diffUtil: DiffUtil
 
     // libs
     private val coroutine: AbstractCoroutine<Int>
