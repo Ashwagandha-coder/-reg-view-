@@ -90,12 +90,11 @@ class MyActivity : AppCompatActivity() {
     private val hashMap: HashMap
     private val hashSet: HashSet
     private val linkedList: LinkedList
-    
+
 
     // libs
     private val coroutine: AbstractCoroutine<Int>
 
-    private val recyclerView: RecyclerView
     private val glide_cacheStrategy: Glide
 
 
