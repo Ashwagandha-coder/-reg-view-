@@ -78,6 +78,8 @@ class MyActivity : AppCompatActivity() {
     private val recyclerView: RecyclerView
     private val diffUtil: DiffUtil
 
+    private val collection: Collection
+
     // libs
     private val coroutine: AbstractCoroutine<Int>
 
