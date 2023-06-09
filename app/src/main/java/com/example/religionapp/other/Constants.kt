@@ -106,3 +106,10 @@ class Constants {
 
 
 }
+
+
+annotation class Mac
+
+open class Impl : Mac() {
+
+}
