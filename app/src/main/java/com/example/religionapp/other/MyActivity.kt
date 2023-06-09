@@ -33,6 +33,7 @@ import com.example.religionapp.ui.mappers.Abstract
 import com.google.android.material.snackbar.Snackbar
 import kotlinx.coroutines.AbstractCoroutine
 import okhttp3.internal.platform.android.AndroidSocketAdapter
+import java.util.LinkedList
 import javax.net.ssl.X509TrustManager
 
 class MyActivity : AppCompatActivity() {
@@ -85,6 +86,11 @@ class MyActivity : AppCompatActivity() {
     private val map: Map
     private val set: Set
     private val concurrentCollection
+    private val arrayList: ArrayList
+    private val hashMap: HashMap
+    private val hashSet: HashSet
+    private val linkedList: LinkedList
+    
 
     // libs
     private val coroutine: AbstractCoroutine<Int>
