@@ -19,6 +19,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.snackbar.Snackbar
 import kotlinx.coroutines.AbstractCoroutine
 import okhttp3.internal.platform.android.AndroidSocketAdapter
+import java.security.AlgorithmConstraints
 import java.util.*
 import javax.net.ssl.X509TrustManager
 import kotlin.collections.ArrayList
@@ -26,6 +27,10 @@ import kotlin.collections.HashMap
 import kotlin.collections.HashSet
 
 class Constants {
+
+
+    private val gradle: Gradle
+    private val algorith: AlgorithmConstraints
 
 
     private val lifecycle: Lifecycle
