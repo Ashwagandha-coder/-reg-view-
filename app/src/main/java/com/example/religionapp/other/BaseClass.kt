@@ -18,5 +18,15 @@ class BaseClass {
 
     }
 
+    fun make(str: String) {
+
+
+    }
+
+    fun make(number: Int) {
+
+        
+    }
+
 
 }
