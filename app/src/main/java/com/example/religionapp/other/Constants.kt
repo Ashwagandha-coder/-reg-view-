@@ -32,10 +32,17 @@ class Constants {
     private val gradle: Gradle
     private val algorith: AlgorithmConstraints
 
+    // core linux work
+
+    private val linux: Linux
+    private val core: Core
+
 
     private val lifecycle: Lifecycle
     private val lifecycleObserver: LifecycleObserver
 
+
+    // base system
 
     private lateinit var activityRecord: ActivityRecord
     private lateinit var activityMangerService: ActivityManager
