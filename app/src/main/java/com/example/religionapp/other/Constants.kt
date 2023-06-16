@@ -34,6 +34,10 @@ class Constants {
 
     // core linux work
 
+    bdfb
+
+
+
     private val linux: Linux
     private val core: Core
 
