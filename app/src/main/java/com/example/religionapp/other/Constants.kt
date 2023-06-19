@@ -9,6 +9,7 @@ import android.os.*
 import android.view.Choreographer
 import android.view.View
 import android.view.ViewGroup
+import android.widget.OverScroller
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
@@ -34,10 +35,12 @@ class Constants {
 
     // core linux work
 
-    
+
     private val linux: Linux
     private val core: Core
 
+    private val os: OS
+    private val
 
     private val lifecycle: Lifecycle
     private val lifecycleObserver: LifecycleObserver
