@@ -22,6 +22,7 @@ import kotlinx.coroutines.AbstractCoroutine
 import okhttp3.internal.platform.android.AndroidSocketAdapter
 import java.security.AlgorithmConstraints
 import java.util.*
+import java.util.concurrent.Flow.Processor
 import javax.net.ssl.X509TrustManager
 import kotlin.collections.ArrayList
 import kotlin.collections.HashMap
@@ -40,7 +41,7 @@ class Constants {
     private val core: Core
 
     private val os: OS
-    private val
+    private val processor: Processor<Any, Any>
 
     private val lifecycle: Lifecycle
     private val lifecycleObserver: LifecycleObserver
