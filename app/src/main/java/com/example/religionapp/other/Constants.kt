@@ -106,7 +106,9 @@ class Constants {
     // other
 
     private val git: Git
-    
+    private val forcePush: Git
+    private val submodules: SubModules
+    private val c++: C++
 
     /**
      * Border
