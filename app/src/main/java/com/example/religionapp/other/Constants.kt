@@ -93,12 +93,20 @@ class Constants {
     private val glide_cacheStrategy: Glide
 
 
+    // other system
+
+
     private lateinit var choreographer: Choreographer
     private lateinit var intent: Intent
     private lateinit var pendingIntent: PendingIntent
 
     private lateinit var x509TrustManager: X509TrustManager
 
+
+    // other
+
+    private val git: Git
+    
 
     /**
      * Border
